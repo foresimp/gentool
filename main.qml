@@ -45,8 +45,9 @@ ApplicationWindow {
         anchors.bottom: parent.bottom
         anchors.left: toolBar.right
         anchors.right: parent.right
-        url: "https://www.youtube.com/watch?v=eg65SbqmT0s&list=RDeg65SbqmT0s&start_radio=1"
+        url: "https://www.youtube.com"
         backgroundColor: "black"
         visible: toolBar.selectedTool === 2
+
     }
 }
