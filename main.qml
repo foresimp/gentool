@@ -3,12 +3,12 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.5
 import QtWebEngine 1.9
 
-Window {
+ApplicationWindow {
     id: root
     width: 640
     height: 480
+    title: "GenTool"
     visible: true
-    title: qsTr("Hello World")
 
     ToolBar {
         id: toolBar
@@ -19,10 +19,12 @@ Window {
     }
 
     WebEngineView {
+        id: webView
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         anchors.left: toolBar.right
         anchors.right: parent.right
-        url: "https://act.hoyolab.com/ys/app/interactive-map/index.html?lang=ja-jp#/map"
+        url: toolBar.urls[toolBar.selectedTool]
+        backgroundColor: "black"
     }
 }
