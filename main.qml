@@ -19,12 +19,23 @@ ApplicationWindow {
     }
 
     WebEngineView {
-        id: webView
+        id: webViewMap
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         anchors.left: toolBar.right
         anchors.right: parent.right
-        url: toolBar.urls[toolBar.selectedTool]
+        url: "https://act.hoyolab.com/ys/app/interactive-map/index.html?lang=ja-jp#/map/2?shown_types=2,3,154,403,356&center=4675.47,-5503.88&zoom=-0.50"
         backgroundColor: "black"
+        visible: toolBar.selectedTool === 0
+    }
+    WebEngineView {
+        id: webViewAchiv
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.left: toolBar.right
+        anchors.right: parent.right
+        url: "http://192.168.0.232/app/fgt/"
+        backgroundColor: "black"
+        visible: toolBar.selectedTool === 1
     }
 }
