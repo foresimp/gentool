@@ -34,6 +34,18 @@ Rectangle {
                 source: "http://192.168.0.232/app/fgt/img/icon.png"
             }
         }
+
+        MouseArea {
+            width: parent.width * 0.9
+            height: width
+            onClicked: { selectedTool = 2 }
+
+            Image {
+                anchors.fill: parent
+                anchors.margins: parent.width * 0.1
+                source: "https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+            }
+        }
     }
 
     Rectangle {
@@ -41,7 +53,7 @@ Rectangle {
         width: parent.width * 0.1
         height: parent.width * 0.9
         color: "lightBlue"
-        y: selectedTool * parent.width
+        y: selectedTool * height
 
         Behavior on y {
             NumberAnimation { duration: 100 }

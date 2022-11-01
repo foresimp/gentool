@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.5
 import QtWebEngine 1.9
+import QtMultimedia 5.0
 
 ApplicationWindow {
     id: root
@@ -37,5 +38,15 @@ ApplicationWindow {
         url: "http://192.168.0.232/app/fgt/"
         backgroundColor: "black"
         visible: toolBar.selectedTool === 1
+    }
+    WebEngineView {
+        id: webViewYoutube
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.left: toolBar.right
+        anchors.right: parent.right
+        url: "https://www.youtube.com/watch?v=eg65SbqmT0s&list=RDeg65SbqmT0s&start_radio=1"
+        backgroundColor: "black"
+        visible: toolBar.selectedTool === 2
     }
 }
